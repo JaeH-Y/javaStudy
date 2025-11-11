@@ -31,6 +31,24 @@ public class OperationPromotionExample {
 		double dValue = iValue3 / 4.0;
 		System.out.println(dValue);
 		
+		// Quiz
+//		아래의 변수들을 선언, 초기화하세요.
+//		두 수를 더한 값을 출력하는 프로그램을 구성하세요.
+//		1. 정수형 변수 num1에 10 할당
+//		2. 실수형 변수 num2에 5.7 할당
+//
+//		[출력]
+//		정수 결과: 15
+//		실수 결과: 15.7
+		
+		int num1 = 10;
+		double num2 = 5.7;
+		
+		int result1 = num1 + (int)num2;
+		double result2 = num1 + num2;
+		System.out.println(result1);
+		System.out.println(result2);
+		
 		
 	}
 
