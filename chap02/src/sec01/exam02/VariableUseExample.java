@@ -6,7 +6,7 @@ public class VariableUseExample {
 		int minute = 5;
 		System.out.println(hour + "시" + minute + "분");
 		
-		int totalminute = (hour * 60) + minute;
+		int totalminute = (hour * 60) + minute; 
 		System.out.println("총 " + totalminute + "분");
 	}
 }
