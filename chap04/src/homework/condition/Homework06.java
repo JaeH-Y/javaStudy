@@ -7,7 +7,7 @@ public class Homework06 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("각 과목의 점수를 입력하세요.");
+		System.out.println("각 과목의 점수를 입력하세요.");
 		System.out.print("소프트웨어설계 점수: ");
 		int designS = sc.nextInt();
 		System.out.print("소프트웨어개발 점수: ");
