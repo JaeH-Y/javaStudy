@@ -15,7 +15,7 @@ public class Homework05 {
 			if(sc.hasNextInt()) {
 				inputVal = sc.nextInt();
 				if(inputVal < 0) {
-					
+					continue;
 				}
 				else if(inputVal == 0) {
 					System.out.println("양수의 합계: "+sum);

@@ -40,6 +40,7 @@ public class Homework08 {
 				String answer = sc.nextLine();
 				System.out.println(answer.charAt(0));
 				
+				// "n".equalsIhnoreCase(변수) => 대소문자 구분 없이 비교(N,n)
 				if(answer.length() != 1 || !(answer.charAt(0) == 'Y') && !(answer.charAt(0) == 'y') && !(answer.charAt(0) == 'N') && !(answer.charAt(0) == 'n')) {
 					
 					System.out.println("올바른 응답이 아닙니다. 다시 입력하세요.");
