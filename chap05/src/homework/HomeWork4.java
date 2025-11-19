@@ -8,12 +8,12 @@ public class HomeWork4 {
 		int[] arr = new int[6];
 		int pushIndex=0;
 		while(true) {
+			if(pushIndex == arr.length) break;
 			int isValue = (int)(Math.random() * 45) + 1;
 			
 			for(int item : arr) {
 				if(item == isValue) continue;
 			}
-			if(pushIndex == arr.length) break;
 			arr[pushIndex++] = isValue;
 			
 		}

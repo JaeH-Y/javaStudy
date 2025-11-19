@@ -22,6 +22,10 @@ public class HomeWork8 {
 		for(String item : todayMenu) {
 			System.out.print(item + ", ");
 		}
-		
+		int a = 100;
+		int b = 195;
+		int maxValue = Integer.max(a, b);
+		int smallValue = a > b ? b : a;
+		System.out.println("\n"+maxValue+" " + smallValue);
 	}
 }
