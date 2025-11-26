@@ -10,18 +10,35 @@ class Solution {
 	public static void main(String[] args) {
 		
 		String[] name = {"may", "kein", "kain", "radi"};
+		int[] nums = {1, 2, 3};
 		ArrayList<Integer> names = new ArrayList<>();
 		ArrayList<Integer> renames = new ArrayList<>();
-		
-		renames.reversed();
-		renames.sort(Comparator.reverseOrder());
+		StringBuffer abc = new StringBuffer();
+		String a = "abc";
+		a.contentEquals(abc);
+		abc.
+//		renames.reversed();
+//		renames.sort(Comparator.reverseOrder());
 		names.addAll(renames);
-		names.addLast(null);
+		names.add(2);
+		names.add(3);
+		names.add(1);
+		System.out.println(names.indexOf(1));
+		names.get(0);
+		renames.addAll(names);
+		renames.removeLast();
+		renames.sort(Comparator.reverseOrder());
+		System.out.println(renames);
+		names.addAll(0, renames);
+		names.size();
+		System.out.println(names);
+		
+		names.subList(index, index + 4).clear();
 		
 		
 		int[] yearning = {5, 10, 1, 3};
-		names.containsAll(yearning);
-		findPatt
+//		names.containsAll(yearning);
+//		findPatt
 		
 		String[][] photo = {
 				{"may", "kein", "kain", "radi"},
