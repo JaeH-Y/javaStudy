@@ -1,13 +1,27 @@
 package exampleTest;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+
 class Solution {
 	
 	
 	public static void main(String[] args) {
 		
 		String[] name = {"may", "kein", "kain", "radi"};
+		ArrayList<Integer> names = new ArrayList<>();
+		ArrayList<Integer> renames = new ArrayList<>();
+		
+		renames.reversed();
+		renames.sort(Comparator.reverseOrder());
+		names.addAll(renames);
+		names.addLast(null);
+		
 		
 		int[] yearning = {5, 10, 1, 3};
+		names.containsAll(yearning);
+		findPatt
 		
 		String[][] photo = {
 				{"may", "kein", "kain", "radi"},

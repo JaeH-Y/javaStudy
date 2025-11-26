@@ -6,27 +6,51 @@ class Solution2 {
 	
 	
 	public static void main(String[] args) {
-		int[] section = {2,3,6};
-		int m = 4;
-		Map<Integer, Integer> map = new HashMap<>();
+		
+		String[] keymap = {"ABACD", "BCEFD"};
+		String[] targets = {"ABCD","AABB"};
+
+		int[] answer = new int[targets.length];
+		
+        Map<Character, Integer> keys = new HashMap<>();
         
-        for(int area : section){
-            map.put(area,area);
+        for(int i  = 0; i < keymap.length; i++) {
+        	
+        	for(int j = 0; j < keymap[i].length(); j++) {
+        		char item = keymap[i].charAt(j);
+        		
+        		int index = keys.getOrDefault(item, j+1);
+        		
+        		keys.put(item, Math.min(index, j+1));
+        	}
+        }
+        keys.forEach(null);
+        
+        for(int i = 0; i < targets.length; i++) {
+        	
+        	for(int j = 0; j < targets[i].length(); j++) {
+        		int finalIndex = keys.getOrDefault(targets[i].charAt(j), -1);
+        		if(finalIndex == -1) {
+        			answer[i] = -1;
+        			break;
+        		}
+        		answer[i] += finalIndex;
+        	}
         }
         
-        int answer = 0;
+        Map<Integer,Integer> countScore = new HashMap<>();
+        int last = 0;
+        countScore.entrySet().stream().sorted(Map.Entry.<Integer,Integer>comparingByKey().reversed()).forEach(entry -> {
+        	int value = entry.getValue();
+    		value += last;
+    		
+        	int box = value / m;
+        	int lost = value % m;
+        	last = lost;
+        	
+        	int a = (box * entry.getKey());
+        });
         
-        while(map.size() > 0){
-            int firstsec = m;
-            int range = firstsec + (m-1);
-            for(int i = firstsec; i <= range; i++){
-                if(map.containsKey(i)){
-                    map.remove(i);
-                }
-                if(map.size() < 1) break;
-            }
-            answer++;
-        }
-        System.out.println(answer);
+//        System.out.println(answer);
 	}
 }
