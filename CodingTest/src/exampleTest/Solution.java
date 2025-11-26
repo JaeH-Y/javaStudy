@@ -13,10 +13,12 @@ class Solution {
 		int[] nums = {1, 2, 3};
 		ArrayList<Integer> names = new ArrayList<>();
 		ArrayList<Integer> renames = new ArrayList<>();
-		StringBuffer abc = new StringBuffer();
+		StringBuffer abc = new StringBuffer().append("abc");
 		String a = "abc";
 		a.contentEquals(abc);
-		abc.
+		abc.delete(0, 0);
+		System.out.println("abc.length() : " +  abc.length());
+		System.out.println("abc.equals : " + abc.toString().equals("abc"));
 //		renames.reversed();
 //		renames.sort(Comparator.reverseOrder());
 		names.addAll(renames);
@@ -32,9 +34,6 @@ class Solution {
 		names.addAll(0, renames);
 		names.size();
 		System.out.println(names);
-		
-		names.subList(index, index + 4).clear();
-		
 		
 		int[] yearning = {5, 10, 1, 3};
 //		names.containsAll(yearning);
