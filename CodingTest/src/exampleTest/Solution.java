@@ -1,8 +1,6 @@
 package exampleTest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 class Solution {
 	
@@ -14,7 +12,10 @@ class Solution {
 		ArrayList<Integer> names = new ArrayList<>();
 		ArrayList<Integer> renames = new ArrayList<>();
 		ArrayList<Character> chars = new ArrayList<>();
-		
+		List<String> asdf = new List<String>();
+		asdf.contains("may");
+		asdf.add(null);
+		asdf.
 		chars.add((char)1);
 		chars.add('3');
 		chars.add('2');
