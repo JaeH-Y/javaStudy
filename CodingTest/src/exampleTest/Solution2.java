@@ -13,7 +13,8 @@ class Solution2 {
 		int[] answer = new int[targets.length];
 		
         Map<Character, Integer> keys = new HashMap<>();
-        
+        keys.containsKey(keys)
+        Arrays.parallelSort(keymap);
         for(int i  = 0; i < keymap.length; i++) {
         	
         	for(int j = 0; j < keymap[i].length(); j++) {

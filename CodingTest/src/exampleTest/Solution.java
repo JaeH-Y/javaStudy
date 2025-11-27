@@ -13,7 +13,19 @@ class Solution {
 		int[] nums = {1, 2, 3};
 		ArrayList<Integer> names = new ArrayList<>();
 		ArrayList<Integer> renames = new ArrayList<>();
-		StringBuffer abc = new StringBuffer().append("abc");
+		ArrayList<Character> chars = new ArrayList<>();
+		
+		chars.add((char)1);
+		chars.add('3');
+		chars.add('2');
+		System.out.println("chars : "+ chars);
+		chars.sort(Comparator.reverseOrder());
+		System.out.println("chars : "+ chars);
+		System.out.println();
+		StringBuffer abc = new StringBuffer().append(1);
+		abc.append(2);
+//		abc.
+		System.out.println("abc : "+ abc);
 		String a = "abc";
 		a.contentEquals(abc);
 		abc.delete(0, 0);
