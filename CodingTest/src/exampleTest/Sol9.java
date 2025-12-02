@@ -27,6 +27,7 @@ public class Sol9 {
 			
 			i++;
 		}
+		if(n % 2 == 1) answer++;
 		
 		System.out.println("answer = " + answer);
 	}
