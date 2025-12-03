@@ -27,6 +27,9 @@ public class Solution3 {
 		for(Map.Entry<Integer, Integer> entry : stuMap.entrySet()) {
 			if(entry.getValue() == 0) empty.add(entry.getKey());
 		}
+		for(Integer key : stuMap.keySet()) {
+			
+		}
 		
 		for(int emp : empty) {
 			if(stuMap.get(emp - 1) == 2) {
