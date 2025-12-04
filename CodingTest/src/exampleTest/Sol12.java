@@ -5,11 +5,12 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Sol12 {
 	public static void main(String[] args) {
 		
-		int[] people = {70, 50, 80, 50};
+		int[] people = {53, 53, 60};
 		int limit = 100;
 		
 		int answer = 0;
@@ -18,11 +19,14 @@ public class Sol12 {
         for(int we : people){
         	// 2명이서 못타는 케이스 제외
             nextNeedWeight = limit - we;
-            if(nextNeedWeight < 40) {
+            if(nextNeedWeight < 1) {
             	answer++;
             	continue;
             }
-            if(!map.containsKey(we)) map.put(we, 1);
+            if(!map.containsKey(we)) {
+            	map.put(we, 1);
+            	continue;
+            }
             int val = map.get(we);
             map.replace(we, ++val);
         }
@@ -42,12 +46,13 @@ public class Sol12 {
         				answer += bigCount;
         				map.remove(bigWeightKey);
         				list.remove(0);
-//        				bigCount -= smallCount;
-        				
-        				if(smallCount - bigCount == 0) {
+        				smallCount -= bigCount;
+        				bigCount = 0;
+        				if(smallCount == 0) {
         					map.remove(smallWeightKey);
         					list.remove(i-1);
         				}
+        				map.replace(smallWeightKey, smallCount);
         				break;
         			}
         			else {
@@ -61,11 +66,27 @@ public class Sol12 {
         	}
         	// 더이상 짝을 찾을 수 없을 때
         	if(bigCount > 0) {
-        		answer += bigCount;
+        		if(bigWeightKey * 2 <= limit) {
+        			answer += bigCount /2;
+        			if(bigCount % 2 == 1) answer++;
+        		}
+        		else {
+        			answer += bigCount;
+        		}
         		map.remove(bigWeightKey);
         		list.remove(0);
         	}
-        	
+        }
+        if(map.size() == 1) {
+        	for(Entry<Integer, Integer> entry : map.entrySet()) {
+        		int val = entry.getValue();
+        		if(entry.getKey() * 2 > limit) {
+        			answer += val;
+        			break;
+        		}
+        		answer += val/2;
+        		if(val % 2 == 1) answer++;
+        	}
         }
         
         System.out.println(answer);
